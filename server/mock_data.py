@@ -37,3 +37,8 @@ purchase_orders = load_json_file('purchase_orders.json')
 
 # All data is now loaded from JSON files in the data/ directory
 # This allows for easier maintenance and updates of the sample data
+
+# Runtime-only store for restocking orders submitted this session.
+# NOT backed by a JSON file -- unlike the seed data above, this holds only
+# in-process state and is intentionally lost on restart.
+submitted_restock_orders = []
